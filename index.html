@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>Fly Tying for Beginners</title>
+		<script>
+			function banner(){
+				var text = confirm("Do You Really want to Leave this Page?");
+				return text;
+			}
+			function answer(){
+				var radio = document.getElementsByName("trivia");
+				var selection = false;
+				var message = "";
+				for( var i = 0; i < radio.length; i++) {
+					if(radio[i].value == "yes" && radio[i].checked == true) {
+						selection = true;
+					} //end if statement
+				} //end for loop
+				if(selection == true) {
+					message = message + "<b><p style='color:gold'>Correct!</p></b>";
+				} else {
+					message = message + "<b><p style='color:black'>Try again.</p></b>";
+				}
+					document.getElementById("response").innerHTML = message;
+			} //end function answer
+		</script>
+		<link type:"text/css" rel="stylesheet" href="main.css"/>
+		<style>
+		body{
+			background-image: url('http://www.pngmart.com/files/6/Mayfly-PNG-Transparent-Image.png');
+			background-repeat: no-repeat;
+		}
+		</style>
+	</head>
+	<body id="background">
+	<a onclick="return banner()" href="https://www.jsflyfishing.com/">	
+		<header id="banner"><img width="4%" src="https://i.pinimg.com/originals/70/8b/85/708b85e09d86113cc0d7aa022614d48f.png"/></header>
+	</a>
+			<nav>
+				<ul id="navmenu">
+					<li class="navitem"> <a href="index.html"> Home</a></li>
+					<li class="navitem"> <a href="videos.html"> Videos</a></li>
+					<li class="navitem"> <a href="images.html"> Pictures</a></li>
+				</ul> </nav>
+			<div class="rightside">
+				<img width="50%" src="mayfly2.jpg"/>
+			</div>
+			<div class="leftside">
+				<img width="50%" src="mayfly.jpg"/>
+			</div>
+			<div class="clearfloat"></div>
+		<h1>Fly Tying for Beginners</h1>
+		<p class="paragraph">This website lists materials and the basic instructions to begin fly tying. Below are the sections that this page will specifically explore.</p>
+		<audio width="400" height="220" controls autoplay>
+			<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+				Your browser does not support HTML 5 audio.
+		</audio>
+	<div class="wrap-list">
+		<ol>
+			<li class="listitem">Materials</li>
+			<li class="listitem">Techniques</li>
+			<li class="listitem">Easy Fly Designs</li>
+		</ol>
+	</div>
+		<video width="400" height="420" loop autoplay controls>
+			<source src="IMG_6813.mov" type="video/mp4">
+		</video>
+	<h3><span class="wrap-text"><u>The</u></span> <span class="wrap-text2">Most</span> <span class="wrap-text"><u>Expensive</u></span> <span class="wrap-text2">and</span> <span class="wrap-text"><u>Important</u></span> <span class="wrap-text2">part of</span> <span class="wrap-text"><u>Fly Tying</u></span></h3>
+	<p>What crucial tool holds the hook in place as you tie your fly?</p>
+	<div class="wrap-trivia">
+		<form>
+			<div id="response"> </div>
+			<input type="radio" name="trivia" value="yes"> Vise<br>
+			<input type="radio" name="trivia" value="no"> Bobbin<br>
+			<input type="radio" name="trivia" value="no"> Scissors<br>
+			<input type="radio" name="trivia" value="no"> Threader<br>
+			<input onclick="answer()" type="button" id="submit" value="Click Here">
+		</form>
+	</div>
+		<img class="pictureFly1" width="25%" src="IMG_1338.jpg"/>
+		<img class="pictureFly2" width="25%" src="IMG_8740.jpg"/>
+		<hr/>
+		<center><span class="wrap-text3">Logan B</span> <a href="https://www.jsflyfishing.com/">My Favorite Website for Everything Fly Tying</a></center>
+			<footer id="banner">Logan Behnke</footer>
+	</body>
+</html>
